@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/aps/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -60,10 +60,12 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-
+export TERM="xterm-256color"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -92,3 +94,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#alias sbtq="~/bin/sbt"
+#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+setopt auto_cd
+#cdpath=(~/opensource/ixchel/core/src/main/scala/org.gmantra.ixchel/models ~/opensource/ixchel/http/src/main/scala/org.gmantra.ixchel/api)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export PATH="/home/abhayps/.cargo/bin:/home/abhayps/anaconda2/bin:$PATH"
+alias lock="i3lock -c 000000"
+alias topcoder="javaws /home/abhayps/code/topcoder/ContestAppletProd.jnlp"
+alias matlab='LD_PRELOAD=/usr/lib64/libstdc++.so.6 matlab -desktop'
+alias cclip='xclip -selection clipboard'
+alias pclip='xclip -selection clipboard -o'
+export PATH="/home/abhayps/opensource/git-trac-command/bin/git-trac:$PATH"
